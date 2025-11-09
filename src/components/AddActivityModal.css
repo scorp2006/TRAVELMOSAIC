@@ -1,0 +1,5 @@
+/* Add Activity Modal Styles - Inherits from CreateTripModal */
+
+.activity-form {
+  padding: 0 24px 24px;
+}

@@ -1,0 +1,176 @@
+/* SphereImageGrid Component Styles */
+
+.sphere-container {
+  position: relative;
+  user-select: none;
+  cursor: grab;
+}
+
+.sphere-container:active {
+  cursor: grabbing;
+}
+
+.sphere-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sphere-image-node {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 200ms ease-out;
+}
+
+.sphere-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.sphere-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+/* Modal Styles */
+.sphere-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.sphere-modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 28rem;
+  width: 100%;
+  overflow: hidden;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.sphere-modal-image-container {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.sphere-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sphere-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.sphere-modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sphere-modal-info {
+  padding: 1.5rem;
+}
+
+.sphere-modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.sphere-modal-description {
+  color: #666;
+}
+
+/* Loading State */
+.sphere-loading {
+  background: #f3f4f6;
+  border-radius: 8px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sphere-loading-text {
+  color: #9ca3af;
+}
+
+/* Empty State */
+.sphere-empty {
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 2px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sphere-empty-content {
+  color: #9ca3af;
+  text-align: center;
+}
+
+.sphere-empty-text {
+  margin-bottom: 0.25rem;
+}
+
+.sphere-empty-subtext {
+  font-size: 0.875rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

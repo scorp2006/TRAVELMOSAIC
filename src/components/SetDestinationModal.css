@@ -1,0 +1,26 @@
+/* Set Destination Modal Styles */
+
+.set-destination-modal {
+  max-width: 500px;
+}
+
+.set-destination-modal .modal-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent-color);
+}
+
+.destination-form {
+  padding: 0 24px 24px;
+}
+
+.destination-input {
+  font-size: 16px;
+  padding: 14px 16px;
+}
+
+.destination-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}

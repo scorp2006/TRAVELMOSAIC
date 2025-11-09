@@ -1,0 +1,257 @@
+/* Dashboard Page Styles */
+
+.dashboard-page {
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard-container {
+  padding: 40px 0;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+/* Quick Stats */
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+/* My Trips Section */
+.my-trips-section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+}
+
+.section-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.empty-icon {
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: var(--accent-color);
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.empty-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.coming-soon {
+  font-size: 13px;
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+/* Trip Cards */
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.trip-card {
+  padding: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all var(--transition-normal);
+}
+
+.trip-card:hover {
+  transform: translateY(-4px);
+}
+
+.trip-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.trip-card-header h3 {
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.trip-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-planning {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+.status-upcoming {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.status-ongoing {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.status-completed {
+  background: rgba(107, 114, 128, 0.1);
+  color: #4b5563;
+}
+
+.trip-destination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.trip-dates {
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+
+.trip-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+}
+
+.trip-budget {
+  font-weight: 600;
+}
+
+.trip-members {
+  color: var(--accent-color);
+}
+
+.loading-state {
+  padding: 60px;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+/* Balances & Activity Sections */
+.balances-section,
+.activity-section {
+  margin-bottom: 60px;
+}
+
+.balances-section h2,
+.activity-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quick-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding-top: 80px;
+  }
+
+  .nav-user .user-name {
+    display: none;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .section-header .btn {
+    width: 100%;
+  }
+
+  .empty-state {
+    padding: 60px 24px;
+  }
+
+  .empty-actions {
+    flex-direction: column;
+  }
+
+  .empty-actions .btn {
+    width: 100%;
+  }
+}

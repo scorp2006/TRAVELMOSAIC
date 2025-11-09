@@ -1,0 +1,280 @@
+/* AI Trip Planner Modal */
+.ai-trip-planner-modal {
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.modal-header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sparkle-icon {
+  color: var(--primary-color);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.planner-step {
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.planner-step h3 {
+  font-size: 24px;
+  margin-bottom: 32px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.planner-step h4 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+/* Form styling enhancements */
+.planner-step .form-group {
+  margin-bottom: 24px;
+}
+
+.planner-step .form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all var(--transition-fast);
+}
+
+.planner-step .form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.planner-step .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Form row */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Budget Inputs */
+.budget-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-inputs .form-input {
+  flex: 1;
+}
+
+.budget-inputs span {
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Interests Grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.interest-chip {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.interest-chip:hover {
+  border-color: var(--primary-color);
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateY(-1px);
+}
+
+.interest-chip.selected {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Generated Itinerary */
+.generated-itinerary {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.itinerary-summary {
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item.total {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.summary-item .label {
+  color: var(--accent-color);
+  font-size: 14px;
+}
+
+.summary-item .value {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.summary-item.total .value {
+  color: var(--primary-color);
+}
+
+/* Activities */
+.itinerary-activities {
+  margin-bottom: 24px;
+}
+
+.activity-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 16px;
+}
+
+.activity-day {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-content h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.activity-content p {
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.activity-cost {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Recommendations */
+.itinerary-recommendations {
+  padding: 20px;
+}
+
+.itinerary-recommendations h4 {
+  margin-bottom: 12px;
+}
+
+.itinerary-recommendations p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--accent-color);
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ai-trip-planner-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .activity-item {
+    flex-direction: column;
+  }
+
+  .activity-day {
+    width: fit-content;
+  }
+
+  .budget-inputs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .budget-inputs span {
+    text-align: center;
+  }
+}

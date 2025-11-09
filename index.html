@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Google Maps JavaScript API with Places Library -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Zhkf9iMQfyMnpPbSDVnlFzw1_0K6khA&libraries=places" async defer></script>
+
+    <title>TripMosaic - Plan Your Perfect Journey</title>
+  </head>
+  <body>
+    <!-- Flowing Lines Background -->
+    <div class="flowing-lines">
+      <svg class="flow-line line-1" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <path d="M 0 400 Q 300 300 600 400 T 1200 400" stroke="rgba(0,0,0,0.08)" stroke-width="2" fill="none"/>
+      </svg>
+      <svg class="flow-line line-2" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <path d="M 0 300 Q 300 200 600 300 T 1200 300" stroke="rgba(0,0,0,0.05)" stroke-width="1.5" fill="none"/>
+      </svg>
+      <svg class="flow-line line-3" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <path d="M 0 500 Q 300 450 600 500 T 1200 500" stroke="rgba(0,0,0,0.06)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
